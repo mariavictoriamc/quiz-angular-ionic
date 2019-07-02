@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar [color]="loadedTheme.color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{ loadedTheme.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>O tema é {{ loadedTheme.name }}!</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Para começar a jogar clique no botão abaixo.
+
+      <ion-button 
+        expand="block" 
+        [color]="loadedTheme.color" 
+        class="ion-margin-top"
+        [routerLink]="['/questions', loadedTheme.id]">
+        <ion-icon slot="end" size="large" [name]="loadedTheme.icon"></ion-icon>
+        INICIAR
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

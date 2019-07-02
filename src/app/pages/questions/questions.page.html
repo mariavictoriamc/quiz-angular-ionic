@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar [color]="loadedTheme.color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>QuiZ - {{ loadedTheme.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ loadedTheme.questions[0].id }}. {{ loadedTheme.questions[0].question }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-item *ngFor="let op of loadedTheme.questions[0].options">
+        <ion-label>{{ op.option }}</ion-label>
+        <ion-radio slot="start" [value]="op.id" [color]="loadedTheme.color"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button expand="block" [color]="loadedTheme.color" class="ion-margin-top" padding>
+    ENVIAR
+  </ion-button>
+</ion-content>

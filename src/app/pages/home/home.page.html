@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/shapes.svg"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Olá {{ username }}!</ion-card-subtitle>
+      <ion-card-title>Bem-vindo ao QuiZ!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Escolha um tema abaixo para começar a jogar.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <app-list-themes></app-list-themes>
+</ion-content>
